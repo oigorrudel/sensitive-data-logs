@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <appender name="MASK" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="br.xksoberbado.sensitivedatalogs.config.MaskingPatternLayout">
+                <maskPattern>cpf=([^,\]\s]*)</maskPattern>
+                <maskPattern>ssn=([^,\]\)]+)(?=[,)\]])</maskPattern>
+                <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            </layout>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="MASK"/>
+    </root>
+</configuration>
