@@ -5,8 +5,7 @@
     <appender name="MASK" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
             <layout class="br.xksoberbado.sensitivedatalogs.config.MaskingPatternLayout">
-                <maskPattern>cpf=([^,\]\s]*)</maskPattern>
-                <maskPattern>ssn=([^,\]\)]+)(?=[,)\]])</maskPattern>
+                <maskPattern>cpf=([^,\]\)]+)(?=[,)\]])</maskPattern>
                 <pattern>${CONSOLE_LOG_PATTERN}</pattern>
             </layout>
         </encoder>

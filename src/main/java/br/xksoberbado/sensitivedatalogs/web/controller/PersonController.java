@@ -17,15 +17,13 @@ public class PersonController {
         log.info("Create. [body: {}]", body);
     }
 
-    public record PersonBody(String name,
-                             String cpf,
-                             String ssn) {
-    }
-
-//    @Data
-//    public static class PersonBody {
-//        private String name;
-//        private String cpf;
-//        private String ssn;
+//    public record PersonBody(String name,
+//                             String cpf) {
 //    }
+
+    @Data
+    public static class PersonBody {
+        private String name;
+        private String cpf;
+    }
 }

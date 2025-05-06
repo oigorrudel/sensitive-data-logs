@@ -1,0 +1,9 @@
+POST localhost:8080/v1/persons
+Content-Type: application/json
+
+{
+  "name": "Igor",
+  "cpf": "11122233300"
+}
+
+###
